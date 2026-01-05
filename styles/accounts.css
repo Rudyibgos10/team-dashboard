@@ -1,0 +1,58 @@
+/* ------------------- UPDATES FOR LAYOUT ------------------- */
+
+.main-content {
+  /* Keep existing layout properties */
+  display: flex; 
+  flex-wrap: wrap; /* Allows the full-width card to drop below */
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 60px;
+}
+
+.card {
+  /* Keep existing card properties */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  min-width: 300px;
+  
+  /* The BPO/Ad Operation cards will use: */
+  /* width: calc(50% - 20px); or width: calc(33.333% - 20px); if you have three top cards */
+}
+
+/* NEW: Rule to make the Accounts table span the full width */
+.card.full-width {
+  width: 100%; /* Spans the full width of the main-content container */
+  margin-top: 30px; /* Add space above the new table */
+}
+
+/* ------------------- NEW STYLING FOR TABLE ACTION BUTTONS ------------------- */
+
+.action-btn {
+  padding: 4px 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.edit-btn {
+  background-color: #ffc107; /* Yellow for Edit */
+  color: #333;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545; /* Red for Delete */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
